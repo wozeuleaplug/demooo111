@@ -1,38 +1,57 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>✦</title>
-  <link rel="preload" href="assets/fonts/Pricedown.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dress Code: 90-ті</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="theme-dark">
-  <!-- Background video -->
-  <video id="bg-video" class="bg-video" autoplay loop playsinline>
-    <source src="assets/videos/landing.mp4" type="video/mp4" />
-  </video>
+<body>
+    <!-- Сторінка входу -->
+    <section id="login-screen" class="screen active">
+        <div class="login-box">
+            <h2>Вхід</h2>
+            <input type="text" id="fullname" placeholder="Введіть ім'я та прізвище">
+            <button onclick="checkGuest()">Увійти</button>
+        </div>
+    </section>
 
-  <!-- Mute / Unmute small square button (white bg, black icon) -->
-  <button id="sound-toggle" class="sound-toggle" aria-label="Перемкнути звук">
-    <svg class="icon icon-on" viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M3 10v4h4l5 4V6L7 10H3zM16.5 12a4.5 4.5 0 0 0-2.7-4.1v8.2a4.5 4.5 0 0 0 2.7-4.1zM14 3.23v2.06a7 7 0 0 1 0 13.42v2.06c4.06-1 7-4.65 7-8.77s-2.94-7.77-7-8.77z"/>
-    </svg>
-    <svg class="icon icon-off" viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M3 10v4h4l5 4V6L7 10H3z"/><path d="M16 8l-2 2 2 2-2 2 2 2 2-2 2 2 2-2-2-2 2-2-2-2-2 2-2-2z"/>
-    </svg>
-  </button>
+    <!-- Головна сторінка -->
+    <section id="main-screen" class="screen">
+        <div class="video-container">
+            <video autoplay muted loop playsinline>
+                <source src="assets/videos/main.mp4" type="video/mp4">
+            </video>
+            <h1 class="title">Дрес-код: 90-ті</h1>
+        </div>
 
-  <main class="login-wrap">
-    <h1 class="title pricedown stroke-w"></h1>
-    <form id="login-form" class="login-form" autocomplete="off">
-      <label for="full-name" class="visually-hidden">Прізвище та імʼя</label>
-      <input id="full-name" name="full-name" class="input pricedown" type="text" placeholder="Прізвище Імʼя" required />
-      <button class="btn btn-primary pricedown" type="submit">Увійти</button>
-      <p id="login-error" class="error pricedown" aria-live="polite"></p>
-    </form>
-  </main>
+        <div class="menu">
+            <button onclick="showWishlist()">Віш-лісти</button>
+            <button onclick="showGuests()">Список гостей</button>
+            <button onclick="window.location.href='YOUR_LINK_HERE'">Образи</button>
+        </div>
 
-  <script src="app.js"></script>
+        <div id="wishlist" class="content-section hidden">
+            <h2>Віш-лісти</h2>
+            <div class="divider">✦</div>
+            <p>Тут будуть віш-лісти гостей...</p>
+            <div class="divider">✦</div>
+            <button onclick="window.location.href='YOUR_LINK_HERE'" class="big-btn">Фото образів</button>
+        </div>
+
+        <div id="guests" class="content-section hidden">
+            <h2>Список гостей</h2>
+            <p>Тут список гостей...</p>
+        </div>
+
+        <div id="personal-video" class="content-section hidden">
+            <h2>Ваше персональне відео</h2>
+            <video controls>
+                <source id="personalVideoSrc" src="" type="video/mp4">
+            </video>
+        </div>
+    </section>
+
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
