@@ -65,6 +65,14 @@ function setupSoundToggle(){
 }
 
 /* Page routing logic */
+document.querySelector(".login-form").addEventListener("submit", function(e){
+  e.preventDefault();
+  document.body.classList.add("fade-out");
+  setTimeout(() => {
+    window.location.href = "index.html";
+  }, 800); // стільки ж, скільки тривалість анімації
+}
+
 document.addEventListener('DOMContentLoaded', ()=>{
   setupSoundToggle();
 
