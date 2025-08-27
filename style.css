@@ -131,3 +131,60 @@ body.theme-dark{
   .sound-toggle{top:10px; right:10px; width:34px; height:34px}
 }
 .visually-hidden{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0}
+
+/* Phone adaptive */
+@media (max-width: 768px) {
+  .bg-video {
+    object-fit: contain; /* замість cover */
+    background: #000; /* чорні поля з боків, щоб не було білих смуг */
+  }
+}
+@media (max-width: 768px) {
+  .login-wrap {
+    text-align: center;
+    padding: 20px;
+  }
+  .login-form {
+    margin: 0 auto;
+  }
+}
+
+/* Fade transition */
+.fade-out {
+  animation: fadeOut 0.8s forwards;
+  background: #000;
+}
+
+.fade-in {
+  animation: fadeIn 0.8s forwards;
+  background: #000;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Photo inspo block */
+.photo-btn-wrap {
+  text-align: center;
+  margin: 30px 0 60px;
+}
+.photo-btn {
+  display: inline-block;
+  padding: 16px 40px;
+  font-size: 22px;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+.photo-btn:hover {
+  background: #a67c52;
+}
