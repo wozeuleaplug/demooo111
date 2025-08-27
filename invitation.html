@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Запрошення</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="assets/js/guests.js"></script>
+  <script defer src="assets/js/invite.js"></script>
+</head>
+<body class="theme-dark">
+  <section class="hero">
+    <video id="heroVideo" class="bg-video" autoplay playsinline muted loop>
+      <source id="heroSource" src="" type="video/mp4" />
+    </video>
+
+    <button id="muteToggle" class="mute-btn" aria-label="Перемкнути звук" title="Звук">
+      <svg class="icon-sound" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+        <path d="M3 9v6h4l5 4V5L7 9H3z"></path>
+      </svg>
+      <svg class="icon-mute" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+        <path d="M16.5 12l4-4-1.5-1.5-4 4-4-4L9.5 8l4 4-4 4 1.5 1.5 4-4 4 4 1.5-1.5-4-4z"></path>
+        <path d="M3 9v6h4l5 4V5L7 9H3z"></path>
+      </svg>
+    </button>
+
+    <div class="hero-overlay">
+      <p class="invited pricedown">Ви запрошені!</p>
+      <h2 id="guestName" class="guest-name pricedown"></h2>
+      <p class="invited-text pricedown">Свято 5-го числа. Просимо бути вчасно о 19:00 у місті ______.</p>
+      <p class="dress pricedown accent stroke-dark">Дрес-код: 90-ті</p>
+    </div>
+  </section>
+
+  <div class="divider"><span class="star pricedown">★</span></div>
+
+  <section class="wishlists">
+    <h3 class="section-title pricedown">Віш-лісти</h3>
+    <div class="wish-grid">
+      <figure class="person">
+        <img src="assets/images/person1.jpg" alt="Іменинник 1" class="avatar" />
+        <figcaption class="caption pricedown">ІМʼЯ 1</figcaption>
+        <a class="btn btn-outline pricedown" href="https://example.com/wishlist1" target="_blank" rel="noopener">ВІШ-ЛІСТ 1</a>
+      </figure>
+      <figure class="person">
+        <img src="assets/images/person2.jpg" alt="Іменинник 2" class="avatar" />
+        <figcaption class="caption pricedown">ІМʼЯ 2</figcaption>
+        <a class="btn btn-outline pricedown" href="https://example.com/wishlist2" target="_blank" rel="noopener">ВІШ-ЛІСТ 2</a>
+      </figure>
+    </div>
+  </section>
+
+  <div class="divider"><span class="star pricedown">★</span></div>
+  <section class="outfits">
+    <a id="outfitsLink" class="btn btn-primary big pricedown" href="#" target="_blank" rel="noopener">ФОТО ОБРАЗІВ</a>
+  </section>
+</body>
+</html>
