@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>★ Запрошення ★</title>
+  <link rel="preload" href="assets/fonts/Pricedown.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="theme-dark">
+  <!-- Hero background video (per-guest) -->
+  <video id="invite-video" class="bg-video" autoplay loop playsinline>
+    <source id="invite-source" src="" type="video/mp4" />
+  </video>
+
+  <!-- Mute / Unmute -->
+  <button id="sound-toggle" class="sound-toggle" aria-label="Перемкнути звук">
+    <svg class="icon icon-on" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M3 10v4h4l5 4V6L7 10H3zM16.5 12a4.5 4.5 0 0 0-2.7-4.1v8.2a4.5 4.5 0 0 0 2.7-4.1zM14 3.23v2.06a7 7 0 0 1 0 13.42v2.06c4.06-1 7-4.65 7-8.77s-2.94-7.77-7-8.77z"/>
+    </svg>
+    <svg class="icon icon-off" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M3 10v4h4l5 4V6L7 10H3z"/><path d="M16 8l-2 2 2 2-2 2 2 2 2-2 2 2 2-2-2-2 2-2-2-2-2 2-2-2z"/>
+    </svg>
+  </button>
+
+  <!-- Overlay invitation text on video -->
+  <section class="hero-overlay">
+    <h1 class="title pricedown stroke-w">Вас запрошено на день народження</h1>
+    <p class="invited-text pricedown stroke-w">
+      5-го числа, просимо бути вчасно о <span class="hl">20:00</span> у <span class="hl">м. Київ</span>.
+    </p>
+    <p class="dress pricedown accent">Дрес-код: 90-ті</p>
+  </section>
+
+  <!-- Divider & Wishlists below the fold -->
+  <section class="wishlists-wrap">
+    <div class="divider">
+      <span class="star pricedown">★</span>
+    </div>
+    <h2 class="pricedown stroke-w lists-title">Віш-лісти</h2>
+
+    <div class="people">
+      <figure class="person">
+        <img src="assets/images/person-a.jpg" alt="Іменинник 1" class="person-photo" />
+        <figcaption class="pricedown stroke-w">Станіслав</figcaption>
+        <a class="btn btn-primary pricedown" href="https://example.com/wishlist-a" target="_blank" rel="noopener">Перейти до віш‑ліста</a>
+      </figure>
+
+      <figure class="person">
+        <img src="assets/images/person-b.jpg" alt="Іменник 2" class="person-photo" />
+        <figcaption class="pricedown stroke-w">Юлія</figcaption>
+        <a class="btn btn-primary pricedown" href="https://example.com/wishlist-b" target="_blank" rel="noopener">Перейти до віш‑ліста</a>
+      </figure>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
